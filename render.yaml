@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: offerte-generator
+    env: python
+    plan: free
+    buildCommand: "apt-get update && apt-get install -y wkhtmltopdf && pip install -r requirements.txt"
+    startCommand: "python app.py"
